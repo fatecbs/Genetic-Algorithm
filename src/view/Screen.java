@@ -174,6 +174,7 @@ public class Screen extends JPanel {
                         Algorithm.mutationRate = Double.parseDouble(txtMutationRate.getText());
                         population = new Population(Algorithm.tamPop, true);
                         textArea.append("Initial distance: " + population.getFittest().getTotalDistance() + "\n");
+                        txtNumberCities.setEditable(false);
                         txtPopulationSize.setEditable(false);
                         repaint();
                     }
@@ -269,6 +270,7 @@ public class Screen extends JPanel {
                 createdCities = false;
                 startedPopulation = false;
                 population = null;
+                txtNumberCities.setEditable(true);
                 txtPopulationSize.setEditable(true);
                 textArea.setText(null);
                 generations = 0;
